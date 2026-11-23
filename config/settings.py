@@ -8,5 +8,7 @@ class Config:
         d_model: int = 512
         eps = 1.0e-5
         q_heads: int = 8
-        n_groups = 4
+        kv_heads: int = 2
+        batch_size = 32
+        max_seq_len = 2048
 
