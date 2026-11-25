@@ -74,7 +74,7 @@ class GQA(nn.Module):
         attn_output = attn_weight @ v
         # Combined attention output
         # Combining grouped attention heads
-        n_heads = self.kv_heads * self.q_heads_per_group
+        n_heads = self.kv_heads * q_heads_per_group
         attn_output = attn_output.reshape(batch_size, n_heads, seq_len, self.d_k)
         # Combining all the attention head outputs
         attn_output = attn_output.transpose(1, 2)
